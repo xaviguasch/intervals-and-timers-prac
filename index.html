@@ -29,6 +29,14 @@
 
         clearTimeout(bombTimer) // it stops the timer from running
       })
+
+      const poopInterval = setInterval(() => {
+        console.log('poop!!!')
+      }, 100)
+
+      setTimeout(() => {
+        clearInterval(poopInterval)
+      }, 4000)
     </script>
   </body>
 </html>
