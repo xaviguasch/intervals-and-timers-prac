@@ -12,11 +12,23 @@
         console.log('ENNNNNGG')
       }
 
-      console.log('Starting')
-      setTimeout(buzzer, 2000)
-      console.log('Finishing')
+      // console.log('Starting')
+      // setTimeout(buzzer, 2000)
+      // console.log('Finishing')
 
-      setInterval(buzzer, 100)
+      // setInterval(buzzer, 100)
+
+      function destroy() {
+        document.body.innerHTML = `<p>DESTROYED</p>`
+      }
+
+      const bombTimer = setTimeout(destroy, 5000)
+
+      window.addEventListener('click', () => {
+        console.log('You clicked! You saved the world')
+
+        clearTimeout(bombTimer) // it stops the timer from running
+      })
     </script>
   </body>
 </html>
